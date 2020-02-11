@@ -1,7 +1,7 @@
 // INPUT VARIABLES
 
-let ebaySalesPrice = 250
-let productBuyCost = 190
+let ebaySalesPrice = 100
+let productBuyCost = 50
 let ebayShippingCost = 5
 let otherCosts = 0
 let totalWorkMinutes = 10
