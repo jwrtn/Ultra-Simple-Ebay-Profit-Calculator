@@ -35,7 +35,7 @@ let giveFeedback = function () {
     console.log('')
 
     if (profitPercent <= 5 || netRoi <= 5) {
-        console.log('No go... not enough profit!' + feedbackTemplate)
+        console.log('No go... not enough profit! ' + feedbackTemplate)
     } else if (profitPercent >= 15 || netRoi >= 15) {
         if (profitPerMinute >= .5) {
         console.log('Excellent buy. ' + feedbackTemplate)
