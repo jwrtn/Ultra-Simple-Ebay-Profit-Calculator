@@ -34,15 +34,15 @@ let giveFeedback = function () {
     console.log('Net profit = $' + Math.round(netProfit * 100) / 100 + ' (' + Math.round(profitPercent * 100) / 100 + '%) ($' + revenueAfterFees + ' revenue after fees - $' + totalCost + ' total cost)')
     console.log('')
 
-    if (profitPercent <= 5 || netRoi <= 5) {
-        console.log('No go... not enough profit! ' + feedbackTemplate)
-    } else if (profitPercent >= 15 || netRoi >= 15) {
+    if (netProfit <= 0 || profitPercent <= 0 || netRoi <= 0) {
+        console.log('No go... you will lose money!')
+    } else if (netProfit >= 20 || profitPercent >= 15 || netRoi >= 15) {
         if (profitPerMinute >= .5) {
         console.log('Excellent buy. ' + feedbackTemplate)
         } else {
             console.log('No go. Not enough profit for your time. ' + feedbackTemplate)
         }
-    } else if (profitPercent >= 10 || netRoi >= 10) {
+    } else if (netProfit >= 10 || profitPercent >= 10 || netRoi >= 10) {
         if (profitPerMinute >= .5) {
         console.log('Good buy. ' + feedbackTemplate)
         } else {
