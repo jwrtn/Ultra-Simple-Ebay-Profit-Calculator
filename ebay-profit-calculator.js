@@ -20,11 +20,9 @@ let profitPerHour = profitPerMinute * 60
 let profitPercent = (netProfit / ebaySalesPrice) * 100
 let netRoi =  (netProfit / totalCost) * 100
 
-// FEEDBACK TEMPLATE
-
 let feedbackTemplate = `$${Math.round(netProfit * 100) / 100} profit @ $${Math.round(profitPerMinute * 100) / 100} profit per minute of work ($${Math.round(profitPerHour * 100) / 100}/hour) (${Math.round(netRoi * 100) / 100}% net ROI)`
 
-let giveFeedback = function () {
+let finalOutput = function () {
 
 // SHOW SALES PRICE, TOTAL COSTS, TOTAL FEES & NET PROFIT
 
@@ -56,4 +54,4 @@ let giveFeedback = function () {
     }
 }
 
-giveFeedback()
+finalOutput()
