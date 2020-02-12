@@ -24,7 +24,7 @@ let feedbackTemplate = `$${Math.round(netProfit * 100) / 100} profit @ $${Math.r
 
 let finalOutput = function () {
 
-// SHOW SALES PRICE, TOTAL COSTS, TOTAL FEES & NET PROFIT
+    // SHOW SALES PRICE, TOTAL COSTS, TOTAL FEES & NET PROFIT
 
     console.log()
     console.log(`Sales price = $${ebaySalesPrice}`)
@@ -33,7 +33,7 @@ let finalOutput = function () {
     console.log(`Net profit = $${Math.round(netProfit * 100) / 100} (${Math.round(profitPercent * 100) / 100}%) ($${revenueAfterFees} revenue after fees - $${totalCost} total cost)`)
     console.log()
 
-// FEEDBACK CRITERIA
+    // FEEDBACK CRITERIA
 
     if (netProfit <= 0 || profitPercent <= 0 || netRoi <= 0) {
         console.log('No go... you will lose money!')
