@@ -22,9 +22,9 @@ let netRoi =  (netProfit / totalCost) * 100
 
 // FEEDBACK TEMPLATE
 
-let feedbackTemplate = `$${Math.round(netProfit * 100) / 100} net profit @ $${Math.round(profitPerMinute * 100) / 100} profit per minute of work ($${Math.round(profitPerHour * 100) / 100}/hour) (${Math.round(netRoi * 100) / 100}% net ROI)`
+let feedbackTemplate = `$${Math.round(netProfit * 100) / 100} profit @ $${Math.round(profitPerMinute * 100) / 100} profit per minute of work ($${Math.round(profitPerHour * 100) / 100}/hour) (${Math.round(netRoi * 100) / 100}% net ROI)`
 
-// SHOW SALES PRICE, TOTAL COSTS, TOTAL FEES, NET PROFIT & GIVE FEEDBACK
+// SHOW SALES PRICE, TOTAL COSTS, TOTAL FEES & FEEDBACK
 
 let giveFeedback = function () {
     console.log()
