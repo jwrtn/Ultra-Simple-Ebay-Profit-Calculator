@@ -27,29 +27,29 @@ let feedbackTemplate = `$${Math.round(profitPerMinute * 100) / 100} profit per m
 // SHOW SALES PRICE, TOTAL COSTS, TOTAL FEES, NET PROFIT & GIVE FEEDBACK
 
 let giveFeedback = function () {
-    console.log('')
+    console.log()
     console.log(`Sales price = $${ebaySalesPrice}`)
     console.log(`Total costs = $${Math.round(totalCost * 100) / 100} ($${productBuyCost} buy cost + $${ebayShippingCost} ebay shipping cost + $${otherCosts} other costs)`)
     console.log(`Total fees = $${Math.round(ebaySalesPrice * totalFees * 100) / 100} (${Math.round(marketplaceFees * 100)}% marketplace + ${Math.round(paymentProcessingFees * 100)}% payment processing + ${Math.round(promotionFees * 100)}% promotions = ${Math.round(totalFees * 100)}% total)`)
     console.log(`Net profit = $${Math.round(netProfit * 100) / 100} (${Math.round(profitPercent * 100) / 100}%) ($${revenueAfterFees} revenue after fees - $${totalCost} total cost)`)
-    console.log('')
+    console.log()
 
     if (netProfit <= 0 || profitPercent <= 0 || netRoi <= 0) {
         console.log('No go... you will lose money!')
     } else if (netProfit >= 20 || profitPercent >= 15 || netRoi >= 15) {
         if (profitPerMinute >= .5) {
-        console.log('Excellent buy. ' + feedbackTemplate)
+        console.log(`Excellent buy. ${feedbackTemplate}`)
         } else {
-            console.log('No go. Not enough profit for your time. ' + feedbackTemplate)
+            console.log(`No go. Not enough profit for your time. ${feedbackTemplate}`)
         }
     } else if (netProfit >= 10 || profitPercent >= 10 || netRoi >= 10) {
         if (profitPerMinute >= .5) {
-        console.log('Good buy. ' + feedbackTemplate)
+        console.log(`Good buy. ${feedbackTemplate}`)
         } else {
-            console.log('No go. Not enough profit for your time. ' + feedbackTemplate)
+            console.log(`No go. Not enough profit for your time. ${feedbackTemplate}`)
         }
     } else {
-        console.log('No go. Not enough profit. ' + feedbackTemplate)
+        console.log(`No go. Not enough profit. ${feedbackTemplate}`)
     }
 }
 
